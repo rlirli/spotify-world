@@ -1,0 +1,90 @@
+body
+{
+    background-color: #283F3B; /*ocean color #283F3B*/
+}
+
+.map-container{
+  height:75vh;
+  overflow:hidden;
+}
+#svgMapPopulation{
+  width: 100%;
+  height: 100% !important;
+}
+
+.svgMap-map-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.svgMap-map-image {
+  width: 100%;
+  height: 100%;
+}
+
+#svgMap_playlists {
+  height: 100%;
+}
+
+
+/*
+* ===================================================
+*     Expanding Bootstrap Styles
+* ===================================================
+*/
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color:white !important;
+}
+
+.p-6 {
+  padding: 6rem !important;
+}
+
+.pt-6,
+.py-6 {
+  padding-top: 6rem !important;
+}
+
+.pr-6,
+.px-6 {
+  padding-right: 6rem !important;
+}
+
+.pb-6,
+.py-6 {
+  padding-bottom: 6rem !important;
+}
+
+.pl-6,
+.px-6 {
+  padding-left: 6rem !important;
+}
+
+.p-7 {
+  padding: 8rem !important;
+}
+
+.pt-7,
+.py-7 {
+  padding-top: 8rem !important;
+}
+
+.pr-7,
+.px-7 {
+  padding-right: 8rem !important;
+}
+
+.pb-7,
+.py-7 {
+  padding-bottom: 8rem !important;
+}
+
+.pl-7,
+.px-7 {
+  padding-left: 8rem !important;
+}
