@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- svg-world-map-->
+    <link href="./js/svgMap/dist/svgMap.css" rel="stylesheet">
+    <script src="./js/svgMap/dist/svgMap.js"></script>
+
+    <!-- Cache and Favicon -->
+    <meta name="theme-color" content="#283F3B" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#283F3B" />
+    <link rel="icon" href="./img/favicon.png">
+
+    <meta name="Description" content="Explore Viral Hits worldwide via map." />
+    <meta property="og:title" content="Spotify World Explorer" />
+    <meta property="og:description" content="Explore Viral Hits worldwide via map." />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Spotify World Explorer" />
+
+
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Spotify World Explorer</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark py-3 fixed-top" style="background: #283F3B !important">
+        <div class="container-xl">
+            <a class="navbar-brand font-weight-bold mt-md-2" href="./index.html" style="color: #1DB954">Spotify
+                Worldwide</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarID">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link disabled" href="" style="color: #80c498c5">Top 50 (Coming Soon)</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="./index.html" style="color: #1DB954">Viral 50</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 82px;">
+
+        <section class="worldmap">
+            <div class="container-fluid px-0">
+                <div class="map-container">
+                    <!-- https://www.cssscript.com/interactive-svg-world-map/-->
+                    <!-- https://github.com/StephanWagner/svgMap/blob/master/demo/index.html -->
+                    <div id="svgMap_playlists"></div>
+
+                    <script src="./js/svgMap/data/spotify-viral50-countries.js"></script>
+                    <script>
+                        new svgMap({
+                            targetElementID: 'svgMap_playlists',
+                            initialZoom: 0,
+                            /* TODO 0 for desktop, 6 for mobile */
+                            /* TODO center on GPS position */
+                            mouseWheelZoomEnabled: true,
+                            colorMax: '#1DB954',
+                            /* Spotify Green CI: #1DB954 */
+                            /* noice Orange #F38D68 noice Orange light #F7B8A1 */
+                            colorMin: '#1DB954',
+                            colorNoData: '#182523',
+                            /* dark: #182523   light #B3B5B5 */
+                            flagType: 'emoji',
+
+                            data: svgMapDataPopulation,
+                            noDataText: 'No data available',
+
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center font-weight-bold pt-1 pt-md-4" style="color: #80c498fa">
+                <p>Click on a country to explore Spotify's Viral 50 playlists from around the world. </p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container text-center  text-muted py-3 pt-5">
+            <div>Spotify Ramp_Up Summer 2020 ·
+                <a class="text-muted" href="https://github.com/rlirli">github/rlirli</a></div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap Scripts jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
